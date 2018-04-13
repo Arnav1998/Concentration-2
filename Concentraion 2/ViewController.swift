@@ -25,9 +25,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func newGameButtonClicked() {
-        //get new theme
-        //change points count to 0
-        //shuffle cards
+
+        self.themeNum = Int(arc4random_uniform(4))
+        
+        brain.points = 0
+        self.pointsLabel.text = "Points: \(brain.points)"
+        
+        
+        brain.shuffle()
+        self.update()
+
     }
     
     private func update() {

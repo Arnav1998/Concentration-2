@@ -49,7 +49,7 @@ class ConcentrationBrain {
         
     }
     
-    private func shuffle() {
+    func shuffle() {
         
         for counter in 0..<(2*self.numOfCardPairs) {
             let index = Int(arc4random_uniform(UInt32(self.numOfCardPairs*2)))
