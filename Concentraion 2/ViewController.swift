@@ -25,7 +25,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func newGameButtonClicked() {
-        
+        //get new theme
+        //change points count to 0
+        //shuffle cards
     }
     
     private func update() {

@@ -20,9 +20,9 @@ class ConcentrationBrain {
         
         self.numOfCardPairs = numOfCardPairs
        
-        generateCards()
+        self.generateCards()
         
-        //TODO shuffle cards
+        self.shuffle()
         
     }
     
@@ -51,7 +51,13 @@ class ConcentrationBrain {
     
     private func shuffle() {
         
-        
+        for counter in 0..<(2*self.numOfCardPairs) {
+            let index = Int(arc4random_uniform(UInt32(self.numOfCardPairs*2)))
+            let firstIdentifier = self.cardsArray[counter].identifier
+            let secondIdentifier = self.cardsArray[index].identifier
+            self.cardsArray[counter].identifier = secondIdentifier
+            self.cardsArray[index].identifier = firstIdentifier
+        }
         
     }
     

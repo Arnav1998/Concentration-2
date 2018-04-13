@@ -10,7 +10,7 @@ import Foundation
 
 struct Card {
     
-    let identifier: Int
+    var identifier: Int
     var isFaceUp: Bool
     
 }
