@@ -12,8 +12,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet var cardButtonsArray: [UIButton]!
+    let brain = ConcentrationBrain(numOfCardPairs: 9)
     
     @IBAction func cardButtonClicked(_ sender: UIButton) {
+        
+    
+        
+        
+        
     }
     
     @IBAction func newGameButtonClicked() {
