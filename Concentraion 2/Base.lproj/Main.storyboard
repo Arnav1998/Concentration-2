@@ -29,6 +29,7 @@
                                 <rect key="frame" x="42" y="118" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vPk-AR-HUr"/>
                                 </connections>
@@ -37,6 +38,7 @@
                                 <rect key="frame" x="269" y="118" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kca-r0-GA0"/>
                                 </connections>
@@ -45,6 +47,7 @@
                                 <rect key="frame" x="156" y="118" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pBs-0o-3xa"/>
                                 </connections>
@@ -53,6 +56,7 @@
                                 <rect key="frame" x="42" y="202" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="10t-RD-epP"/>
                                 </connections>
@@ -61,6 +65,7 @@
                                 <rect key="frame" x="269" y="202" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ht-gR-OiI"/>
                                 </connections>
@@ -69,6 +74,7 @@
                                 <rect key="frame" x="156" y="202" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TmJ-kd-uOu"/>
                                 </connections>
@@ -77,6 +83,7 @@
                                 <rect key="frame" x="269" y="286" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWF-sO-euf"/>
                                 </connections>
@@ -85,6 +92,7 @@
                                 <rect key="frame" x="156" y="286" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vXL-DI-pCA"/>
                                 </connections>
@@ -93,6 +101,7 @@
                                 <rect key="frame" x="269" y="370" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O5F-yO-PQT"/>
                                 </connections>
@@ -101,6 +110,7 @@
                                 <rect key="frame" x="156" y="370" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0wp-GS-yQd"/>
                                 </connections>
@@ -109,6 +119,7 @@
                                 <rect key="frame" x="269" y="454" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="et8-Fi-fR9"/>
                                 </connections>
@@ -117,6 +128,7 @@
                                 <rect key="frame" x="156" y="454" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aj6-zL-rat"/>
                                 </connections>
@@ -125,6 +137,7 @@
                                 <rect key="frame" x="269" y="538" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iFj-Gl-FwS"/>
                                 </connections>
@@ -133,6 +146,7 @@
                                 <rect key="frame" x="156" y="538" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="daV-8h-bpp"/>
                                 </connections>
@@ -159,6 +173,7 @@
                                 <rect key="frame" x="42" y="286" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j5i-Ia-46P"/>
                                 </connections>
@@ -167,6 +182,7 @@
                                 <rect key="frame" x="42" y="370" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PtL-vw-C76"/>
                                 </connections>
@@ -175,6 +191,7 @@
                                 <rect key="frame" x="42" y="454" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SVR-nc-LOx"/>
                                 </connections>
@@ -183,6 +200,7 @@
                                 <rect key="frame" x="42" y="538" width="63" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91214042901992798" green="0.048573091626167297" blue="0.079284079372882843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <connections>
                                     <action selector="cardButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evb-XS-sR1"/>
                                 </connections>

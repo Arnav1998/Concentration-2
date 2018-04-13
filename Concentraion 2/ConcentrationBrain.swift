@@ -33,7 +33,7 @@ class ConcentrationBrain {
         
     }
     
-    func generateCards() {
+    private func generateCards() {
         
         for index in 0..<self.numOfCardPairs {
             
