@@ -12,6 +12,7 @@ class ConcentrationBrain {
     
     var cardsArray = [Card]()
     let numOfCardPairs: Int
+    var numOfCardsFacedUp: Int = 0
     
     init(numOfCardPairs: Int) {
         
@@ -27,8 +28,10 @@ class ConcentrationBrain {
         
         if (cardsArray[index].isFaceUp) {
             cardsArray[index].isFaceUp = false
+            self.numOfCardsFacedUp -= 1
         } else {
             cardsArray[index].isFaceUp = true
+            self.numOfCardsFacedUp += 1
         }
         
     }

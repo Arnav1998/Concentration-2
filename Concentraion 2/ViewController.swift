@@ -16,10 +16,8 @@ class ViewController: UIViewController {
     let animalsEmojis = ["🐶","🦁","🐼","🦄","🐛","🦋","🐳","🐿","🐇"]
     
     @IBAction func cardButtonClicked(_ sender: UIButton) {
-        
         brain.cardPressed(index: cardButtonsArray.index(of: sender)!)
         self.update();
-        
     }
     
     @IBAction func newGameButtonClicked() {
@@ -39,6 +37,24 @@ class ViewController: UIViewController {
             }
             
         }
+        
+        if (brain.numOfCardsFacedUp == 2) {
+            close()
+        }
+        
+    }
+    
+    private func close() {
+        
+        for index in 0..<brain.cardsArray.count {
+            
+            if (brain.cardsArray[index].isFaceUp) {
+                brain.cardPressed(index: index)
+            }
+            
+        }
+        
+        brain.numOfCardsFacedUp = 0
         
     }
     
