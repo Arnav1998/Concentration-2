@@ -31,6 +31,10 @@ class ViewController: UIViewController {
         brain.points = 0
         self.pointsLabel.text = "Points: \(brain.points)"
         
+        for index in 1..<brain.cardsArray.count {
+            brain.cardsArray[index].numOfTimesFlipped = 0
+        }
+        
         brain.shuffle()
         self.update()
 
