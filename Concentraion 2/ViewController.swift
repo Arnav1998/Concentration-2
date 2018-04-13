@@ -10,7 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-   
-
+    @IBOutlet weak var pointsLabel: UILabel!
+    @IBOutlet var cardButtonsArray: [UIButton]!
+    
+    @IBAction func cardButtonClicked(_ sender: UIButton) {
+    }
+    
+    @IBAction func newGameButtonClicked() {
+    }
+    
 }
 
