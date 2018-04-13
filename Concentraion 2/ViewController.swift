@@ -31,7 +31,6 @@ class ViewController: UIViewController {
         brain.points = 0
         self.pointsLabel.text = "Points: \(brain.points)"
         
-        
         brain.shuffle()
         self.update()
 

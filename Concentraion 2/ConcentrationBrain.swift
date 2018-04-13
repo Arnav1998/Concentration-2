@@ -34,6 +34,7 @@ class ConcentrationBrain {
         } else {
             cardsArray[index].isFaceUp = true
             self.numOfCardsFacedUp += 1
+            cardsArray[index].numOfTimesFlipped += 1
         }
         
     }
@@ -42,8 +43,8 @@ class ConcentrationBrain {
         
         for index in 0..<self.numOfCardPairs {
             
-            cardsArray.append(Card(identifier: index, isFaceUp: false))
-            cardsArray.append(Card(identifier: index, isFaceUp: false))
+            cardsArray.append(Card(identifier: index, isFaceUp: false, numOfTimesFlipped: 0))
+            cardsArray.append(Card(identifier: index, isFaceUp: false, numOfTimesFlipped: 0))
             
         }
         
@@ -64,13 +65,15 @@ class ConcentrationBrain {
     func checkForMatch(){
         
         if (self.cardsFacedUp[0].identifier == self.cardsFacedUp[1].identifier) {
-            points+=1
+            self.points+=1
+        } else {
+            if (self.cardsFacedUp[0].numOfTimesFlipped > 1 || self.cardsFacedUp[1].numOfTimesFlipped > 1) {
+                self.points-=1
+            }
         }
         
         cardsFacedUp.removeAll()
         
     }
-    
-    
     
 }

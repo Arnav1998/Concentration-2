@@ -12,5 +12,6 @@ struct Card {
     
     var identifier: Int
     var isFaceUp: Bool
+    var numOfTimesFlipped: Int
     
 }
