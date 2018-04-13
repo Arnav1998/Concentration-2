@@ -54,6 +54,8 @@ class ViewController: UIViewController {
         
         if (brain.numOfCardsFacedUp == 2) {
             close()
+            brain.checkForMatch()
+            self.pointsLabel.text = "Points: \(brain.points)"
         }
         
     }
@@ -64,6 +66,7 @@ class ViewController: UIViewController {
             
             if (brain.cardsArray[index].isFaceUp) {
                 brain.cardPressed(index: index)
+                brain.cardsFacedUp.append(brain.cardsArray[index])
             }
             
         }

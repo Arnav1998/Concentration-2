@@ -13,6 +13,8 @@ class ConcentrationBrain {
     var cardsArray = [Card]()
     private let numOfCardPairs: Int
     var numOfCardsFacedUp: Int = 0
+    var cardsFacedUp = [Card]()
+    var points = 0
     
     init(numOfCardPairs: Int) {
         
@@ -52,5 +54,17 @@ class ConcentrationBrain {
         
         
     }
+    
+    func checkForMatch(){
+        
+        if (self.cardsFacedUp[0].identifier == self.cardsFacedUp[1].identifier) {
+            points+=1
+        }
+        
+        cardsFacedUp.removeAll()
+        
+    }
+    
+    
     
 }
