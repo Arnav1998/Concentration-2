@@ -11,7 +11,7 @@ import Foundation
 class ConcentrationBrain {
     
     var cardsArray = [Card]()
-    let numOfCardPairs: Int
+    private let numOfCardPairs: Int
     var numOfCardsFacedUp: Int = 0
     
     init(numOfCardPairs: Int) {
@@ -44,6 +44,12 @@ class ConcentrationBrain {
             cardsArray.append(Card(identifier: index, isFaceUp: false))
             
         }
+        
+    }
+    
+    private func shuffle() {
+        
+        
         
     }
     
