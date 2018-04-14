@@ -14,6 +14,7 @@ class ConcentrationBrain {
     private let numOfCardPairs: Int
     var numOfCardsFacedUp: Int = 0
     var cardsFacedUp = [Card]()
+    var indexesOfCardsFacedUp = [Int]()
     var points = 0
     
     init(numOfCardPairs: Int) {
@@ -43,8 +44,8 @@ class ConcentrationBrain {
         
         for index in 0..<self.numOfCardPairs {
             
-            cardsArray.append(Card(identifier: index, isFaceUp: false, numOfTimesFlipped: 0))
-            cardsArray.append(Card(identifier: index, isFaceUp: false, numOfTimesFlipped: 0))
+            cardsArray.append(Card(identifier: index))
+            cardsArray.append(Card(identifier: index))
             
         }
         
@@ -66,6 +67,8 @@ class ConcentrationBrain {
         
         if (self.cardsFacedUp[0].identifier == self.cardsFacedUp[1].identifier) {
             self.points+=1
+            self.cardsArray[indexesOfCardsFacedUp[0]].matched = true
+            self.cardsArray[indexesOfCardsFacedUp[1]].matched = true
         } else {
             if (self.cardsFacedUp[0].numOfTimesFlipped > 1 || self.cardsFacedUp[1].numOfTimesFlipped > 1) {
                 self.points-=1
@@ -73,6 +76,7 @@ class ConcentrationBrain {
         }
         
         cardsFacedUp.removeAll()
+        indexesOfCardsFacedUp.removeAll()
         
     }
     

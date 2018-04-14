@@ -11,7 +11,11 @@ import Foundation
 struct Card {
     
     var identifier: Int
-    var isFaceUp: Bool
-    var numOfTimesFlipped: Int
+    var isFaceUp: Bool = false
+    var numOfTimesFlipped: Int = 0
+    var matched: Bool = false
     
+    init(identifier: Int) {
+        self.identifier = identifier
+    }
 }
