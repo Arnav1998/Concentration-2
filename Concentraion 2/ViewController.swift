@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet var cardButtonsArray: [UIButton]!
-    private let brain = ConcentrationBrain(numOfCardPairs: 9)
+    private var brain = ConcentrationBrain(numOfCardPairs: 9)
     private let animalsEmojis = ["🐶","🦁","🐼","🦄","🐛","🦋","🐳","🐿","🐇"]
     private let foodEmojis = ["🍉","🥝","🍔","🍟","🍕","🥗","🍝","🍙","🥧"]
     private let sportsEmojis = ["🥈","🏄🏻‍♀️","⚽️","⚾️","🏌️‍♀️","🤸‍♂️","🤾🏾‍♂️","🏊🏻‍♀️","🤼‍♀️"]
@@ -28,18 +28,14 @@ class ViewController: UIViewController {
 
         self.themeNum = Int(arc4random_uniform(4))
         
-        brain.points = 0
+        brain = ConcentrationBrain(numOfCardPairs: 9)
         self.pointsLabel.text = "Points: \(brain.points)"
         
-        for index in 1..<brain.cardsArray.count {
-            brain.cardsArray[index].numOfTimesFlipped = 0
-            brain.cardsArray[index].matched = false
+        for index in cardButtonsArray.indices {
             self.cardButtonsArray[index].isEnabled = true
         }
         
-        brain.shuffle()
         self.update()
-
     }
     
     private func update() {
