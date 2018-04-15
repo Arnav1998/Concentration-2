@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             
             if (brain.cardsArray[index].isFaceUp) {
                 
-                self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)
+                self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 0.6509803922, green: 0.7294117647, blue: 0.9803921569, alpha: 1)
                 if (self.themeNum == 0) {
                     self.cardButtonsArray[index].setTitle(animalsEmojis[brain.cardsArray[index].identifier], for: UIControlState.normal)
                 } else if (self.themeNum == 1) {
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
             } else {
                 
                 if (!brain.cardsArray[index].matched) {
-                    self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 0.912140429, green: 0.04857309163, blue: 0.07928407937, alpha: 1)
+                    self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 0.4708153009, green: 0.5773581862, blue: 0.9637343287, alpha: 1)
                     self.cardButtonsArray[index].setTitle("", for: UIControlState.normal)
                 } else {
                     self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
