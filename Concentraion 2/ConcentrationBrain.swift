@@ -66,7 +66,7 @@ class ConcentrationBrain {
     func checkForMatch(){
         
         if (self.cardsFacedUp[0].identifier == self.cardsFacedUp[1].identifier) {
-            self.points+=1
+            self.points+=2
             self.cardsArray[indexesOfCardsFacedUp[0]].matched = true
             self.cardsArray[indexesOfCardsFacedUp[1]].matched = true
         } else {
