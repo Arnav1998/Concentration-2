@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -19,16 +20,36 @@ class ViewController: UIViewController {
     private let sportsEmojis = ["🥈","🏄🏻‍♀️","⚽️","⚾️","🏌️‍♀️","🤸‍♂️","🤾🏾‍♂️","🏊🏻‍♀️","🤼‍♀️"]
     private let faceEmojis = ["😌","🤯","👻","🙄","🤡","😴","🤗","🤑","😈"]
     private var themeNum = 0
+    private var audioPlayer: AVAudioPlayer!
+    private var audioPlayer2: AVAudioPlayer!
     
     @IBOutlet weak var concentrationLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let url = Bundle.main.url(forResource: "backgroundMusic", withExtension: "mp3")
+        let url2 = Bundle.main.url(forResource: "buttonClickSound", withExtension: "mp3")
+        do {
+            self.audioPlayer = try AVAudioPlayer(contentsOf: url!)
+            self.audioPlayer2 = try AVAudioPlayer(contentsOf: url2!)
+            self.audioPlayer.play()
+            self.audioPlayer.numberOfLoops = -1
+            self.audioPlayer2.prepareToPlay()
+        } catch let error as NSError {
+            print(error.debugDescription)
+        }
+    }
     
     @IBAction func cardButtonClicked(_ sender: UIButton) {
         brain.cardPressed(index: cardButtonsArray.index(of: sender)!)
         self.update();
+        self.audioPlayer2.play()
     }
     
     @IBAction func newGameButtonClicked() {
-
+        
+        self.audioPlayer2.play()
         self.themeNum = Int(arc4random_uniform(4))
         
         if (self.themeNum == 0) {
@@ -37,15 +58,15 @@ class ViewController: UIViewController {
             self.pointsLabel.textColor = #colorLiteral(red: 0.6352941176, green: 0.937254902, blue: 0.2666666667, alpha: 1)
             self.newGameLabel.setTitleColor(#colorLiteral(red: 0.6352941176, green: 0.937254902, blue: 0.2666666667, alpha: 1), for: UIControlState.normal)
         } else if (self.themeNum == 1) {
-            view.backgroundColor = #colorLiteral(red: 0.1607843137, green: 0.1529411765, blue: 0.1450980392, alpha: 1)
-            self.concentrationLabel.textColor = #colorLiteral(red: 0.768627451, green: 0, blue: 0.09411764706, alpha: 1)
-            self.pointsLabel.textColor = #colorLiteral(red: 0.768627451, green: 0, blue: 0.09411764706, alpha: 1)
-            self.newGameLabel.setTitleColor(#colorLiteral(red: 0.768627451, green: 0, blue: 0.09411764706, alpha: 1), for: UIControlState.normal)
+            view.backgroundColor = #colorLiteral(red: 0.2, green: 0.2156862745, blue: 0.2705882353, alpha: 1)
+            self.concentrationLabel.textColor = #colorLiteral(red: 0.9176470588, green: 0.1803921569, blue: 0.2862745098, alpha: 1)
+            self.pointsLabel.textColor = #colorLiteral(red: 0.9176470588, green: 0.1803921569, blue: 0.2862745098, alpha: 1)
+            self.newGameLabel.setTitleColor(#colorLiteral(red: 0.9176470588, green: 0.1803921569, blue: 0.2862745098, alpha: 1), for: UIControlState.normal)
         } else if (self.themeNum == 2) {
-            view.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.2196078431, blue: 0.3490196078, alpha: 1)
-            self.concentrationLabel.textColor = #colorLiteral(red: 0.1568627451, green: 0.1921568627, blue: 0.2862745098, alpha: 1)
-            self.pointsLabel.textColor = #colorLiteral(red: 0.1568627451, green: 0.1921568627, blue: 0.2862745098, alpha: 1)
-            self.newGameLabel.setTitleColor(#colorLiteral(red: 0.1568627451, green: 0.1921568627, blue: 0.2862745098, alpha: 1), for: UIControlState.normal)
+            view.backgroundColor = #colorLiteral(red: 1, green: 0.1019607843, blue: 0.4156862745, alpha: 1)
+            self.concentrationLabel.textColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
+            self.pointsLabel.textColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
+            self.newGameLabel.setTitleColor(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1), for: UIControlState.normal)
         } else {
             view.backgroundColor = #colorLiteral(red: 0.1843137255, green: 0.8823529412, blue: 0.8392156863, alpha: 1)
             self.concentrationLabel.textColor = #colorLiteral(red: 1, green: 0.9843137255, blue: 0.5921568627, alpha: 1)
@@ -74,7 +95,7 @@ class ViewController: UIViewController {
                     self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 1, green: 0.9411764706, blue: 0.4784313725, alpha: 1)
                 } else if (self.themeNum == 1) {
                      self.cardButtonsArray[index].setTitle(foodEmojis[brain.cardsArray[index].identifier], for: UIControlState.normal)
-                     self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 1, green: 0.3803921569, blue: 0.02745098039, alpha: 1)
+                     self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 0.4666666667, green: 0.768627451, blue: 0.8274509804, alpha: 1)
                 } else if (self.themeNum == 2) {
                     self.cardButtonsArray[index].setTitle(faceEmojis[brain.cardsArray[index].identifier], for: UIControlState.normal)
                     self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.9294117647, blue: 0.9529411765, alpha: 1)
@@ -89,9 +110,9 @@ class ViewController: UIViewController {
                     if (self.themeNum == 0) {
                         self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 0.6352941176, green: 0.937254902, blue: 0.2666666667, alpha: 1)
                     } else if (self.themeNum == 1) {
-                        self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 0.768627451, green: 0, blue: 0.09411764706, alpha: 1)
+                        self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.1803921569, blue: 0.2862745098, alpha: 1)
                     } else if (self.themeNum == 2) {
-                        self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 0.1568627451, green: 0.1921568627, blue: 0.2862745098, alpha: 1)
+                        self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.4666666667, blue: 0.7843137255, alpha: 1)
                     } else {
                         self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 1, green: 0.9843137255, blue: 0.5921568627, alpha: 1)
                     }
