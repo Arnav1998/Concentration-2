@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concentration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyc-jo-ScW">
-                                <rect key="frame" x="72.666666666666686" y="50" width="231" height="45.666666666666657"/>
+                                <rect key="frame" x="72" y="50" width="231" height="45.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="textColor" red="0.63529411764705879" green="0.93725490196078431" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -205,7 +205,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eI7-kN-q7p">
-                                <rect key="frame" x="0.33333333333334281" y="727" width="374.66666666666663" height="51"/>
+                                <rect key="frame" x="0.0" y="727" width="375" height="51"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="New Game">
@@ -224,16 +224,28 @@
                                 <color key="textColor" red="0.63529411764705879" green="0.93725490196078431" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Z0T-Xc-lIx">
+                                <rect key="frame" x="113" y="786" width="150" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7h-Xj-emW">
+                                <rect key="frame" x="329" y="737" width="30" height="30"/>
+                                <connections>
+                                    <action selector="volumeButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QTI-Rh-Yy6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0039215686274509803" green="0.11372549019607843" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eI7-kN-q7p" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="59h-TN-2AC"/>
                             <constraint firstItem="Kyc-jo-ScW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6LU-fS-ZvW"/>
+                            <constraint firstItem="R7h-Xj-emW" firstAttribute="leading" secondItem="eI7-kN-q7p" secondAttribute="trailing" constant="-46" id="8WN-Rq-YPo"/>
                             <constraint firstItem="EwA-6Q-AZz" firstAttribute="leading" secondItem="HXf-ld-oFD" secondAttribute="leading" id="Fjy-3k-DKN"/>
                             <constraint firstItem="eI7-kN-q7p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P6e-gj-eGd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HXf-ld-oFD" secondAttribute="bottom" constant="154" id="PbO-WU-g5H"/>
                             <constraint firstItem="HXf-ld-oFD" firstAttribute="top" relation="lessThanOrEqual" secondItem="Kyc-jo-ScW" secondAttribute="bottom" constant="16" id="cFJ-C0-iUa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kyc-jo-ScW" secondAttribute="trailing" id="crb-GK-rGx"/>
+                            <constraint firstItem="R7h-Xj-emW" firstAttribute="centerY" secondItem="eI7-kN-q7p" secondAttribute="centerY" id="dd9-TE-Mb1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eI7-kN-q7p" secondAttribute="bottom" id="fq9-pM-uuu"/>
                             <constraint firstItem="eI7-kN-q7p" firstAttribute="top" secondItem="EwA-6Q-AZz" secondAttribute="bottom" constant="15" id="gQA-sh-WWK"/>
                             <constraint firstItem="Kyc-jo-ScW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="igk-dM-42H"/>
@@ -251,6 +263,7 @@
                         <outlet property="concentrationLabel" destination="Kyc-jo-ScW" id="Gx8-kh-9cn"/>
                         <outlet property="newGameLabel" destination="eI7-kN-q7p" id="ftp-Wd-4dC"/>
                         <outlet property="pointsLabel" destination="EwA-6Q-AZz" id="iHp-NH-qiD"/>
+                        <outlet property="volumeButton" destination="R7h-Xj-emW" id="SKl-ki-bPc"/>
                         <outletCollection property="cardButtonsArray" destination="1Y9-3G-0yc" collectionClass="NSMutableArray" id="vGs-CZ-OlB"/>
                         <outletCollection property="cardButtonsArray" destination="ahW-qQ-aH8" collectionClass="NSMutableArray" id="X4T-AV-Eha"/>
                         <outletCollection property="cardButtonsArray" destination="5K3-kn-2km" collectionClass="NSMutableArray" id="QEc-C6-vbn"/>

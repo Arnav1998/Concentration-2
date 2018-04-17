@@ -22,8 +22,10 @@ class ViewController: UIViewController {
     private var themeNum = 0
     private var audioPlayer: AVAudioPlayer!
     private var audioPlayer2: AVAudioPlayer!
+    private var soundStatus = true
     
     @IBOutlet weak var concentrationLabel: UILabel!
+    @IBOutlet weak var volumeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +41,31 @@ class ViewController: UIViewController {
         } catch let error as NSError {
             print(error.debugDescription)
         }
+        
+        self.volumeButton.setTitle("🔊", for: UIControlState.normal)
+        
+    }
+    
+    @IBAction func volumeButtonClicked(_ sender: UIButton) {
+        
+        if (self.soundStatus) {
+            self.soundStatus = false
+            self.volumeButton.setTitle("🔇", for: UIControlState.normal)
+            self.audioPlayer.stop()
+        } else {
+            self.soundStatus = true
+            self.volumeButton.setTitle("🔊", for: UIControlState.normal)
+            self.audioPlayer.play()
+        }
+        
     }
     
     @IBAction func cardButtonClicked(_ sender: UIButton) {
         brain.cardPressed(index: cardButtonsArray.index(of: sender)!)
         self.update();
-        self.audioPlayer2.play()
+        if (self.soundStatus) {
+            self.audioPlayer2.play()
+        }
     }
     
     @IBAction func newGameButtonClicked() {
