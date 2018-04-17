@@ -97,7 +97,7 @@ class ViewController: UIViewController {
                     }
                     self.cardButtonsArray[index].setTitle("", for: UIControlState.normal)
                 } else {
-                    self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+                    self.cardButtonsArray[index].backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
                     self.cardButtonsArray[index].setTitle("", for: UIControlState.normal)
                     self.cardButtonsArray[index].isEnabled = false
                 }
