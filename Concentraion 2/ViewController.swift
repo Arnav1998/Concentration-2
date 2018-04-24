@@ -149,7 +149,13 @@ class ViewController: UIViewController {
         
         if (brain.numOfCardsFacedUp == 2) {
             close()
-            brain.checkForMatch()
+            if(brain.checkForMatch()) {
+                self.cardButtonsArray[brain.indexesOfCardsFacedUp[0]].isEnabled = false
+                self.cardButtonsArray[brain.indexesOfCardsFacedUp[1]].isEnabled = false
+                
+                    brain.cardsFacedUp.removeAll()
+                    brain.indexesOfCardsFacedUp.removeAll()
+            }
             self.pointsLabel.text = "Points: \(brain.points)"
         }
         

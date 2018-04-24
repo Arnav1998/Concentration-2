@@ -63,12 +63,15 @@ class ConcentrationBrain {
         
     }
     
-    func checkForMatch(){
+    func checkForMatch() -> Bool {
         
         if (self.cardsFacedUp[0].identifier == self.cardsFacedUp[1].identifier) {
             self.points+=2
             self.cardsArray[indexesOfCardsFacedUp[0]].matched = true
             self.cardsArray[indexesOfCardsFacedUp[1]].matched = true
+            
+            return true
+            
         } else {
             if (self.cardsFacedUp[0].numOfTimesFlipped > 1 || self.cardsFacedUp[1].numOfTimesFlipped > 1) {
                 self.points-=1
@@ -77,6 +80,7 @@ class ConcentrationBrain {
         
         cardsFacedUp.removeAll()
         indexesOfCardsFacedUp.removeAll()
+        return false
         
     }
     
