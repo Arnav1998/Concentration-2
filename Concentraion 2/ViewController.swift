@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     private var audioPlayer: AVAudioPlayer!
     private var audioPlayer2: AVAudioPlayer!
     private var soundStatus = true
+    private let userDefault = UserDefaults.standard
     
     @IBOutlet weak var concentrationLabel: UILabel!
     @IBOutlet weak var volumeButton: UIButton!
@@ -43,6 +44,12 @@ class ViewController: UIViewController {
         }
         
         self.volumeButton.setTitle("🔊", for: UIControlState.normal)
+
+        if let savedHighScore = userDefault.value(forKey: "highScore") {
+            brain.highScore = savedHighScore as! Int
+        }
+        
+        print(brain.highScore)
         
     }
     
@@ -115,6 +122,13 @@ class ViewController: UIViewController {
         }
         
         self.update()
+        
+        if let savedHighScore = userDefault.value(forKey: "highScore") {
+            brain.highScore = savedHighScore as! Int
+        }
+        
+        print(brain.highScore)
+        
     }
     
     private func update() {
@@ -169,6 +183,13 @@ class ViewController: UIViewController {
                     brain.indexesOfCardsFacedUp.removeAll()
             }
             self.pointsLabel.text = "Points: \(brain.points)"
+            
+            if (brain.highScore < brain.points) {
+                brain.highScore = brain.points
+                userDefault.set(brain.highScore, forKey: "highScore")
+            }
+            
+            print(brain.highScore)
         }
         
     }

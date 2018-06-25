@@ -16,6 +16,7 @@ class ConcentrationBrain {
     var cardsFacedUp = [Card]()
     var indexesOfCardsFacedUp = [Int]()
     var points = 0
+    var highScore = 0
     
     init(numOfCardPairs: Int) {
         
