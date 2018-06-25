@@ -69,7 +69,7 @@ class ViewController: UIViewController {
     
     @IBAction func helpButtonClicked() {
         
-        let alert = UIAlertController(title: "How To Play?", message: "Put your concentration power to the test. Match same cards to score 2 points. However, if a card is opened more than once, without being matched, you lose a point. So, concentrate and enjoy the game.", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "How To Play?", message: "Put your concentration power to the test. Match same cards to score 2 points. However, if a card is opened more than once, without being matched, you lose a point. So, concentrate and enjoy the game. \n\n High Score: \(brain.highScore)", preferredStyle: UIAlertControllerStyle.alert)
         
         // add an action (button)
         alert.addAction(UIAlertAction(title: "Play", style: UIAlertActionStyle.default, handler: nil))
