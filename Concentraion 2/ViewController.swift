@@ -49,7 +49,20 @@ class ViewController: UIViewController {
             brain.highScore = savedHighScore as! Int
         }
         
-        print(brain.highScore)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if (!userDefault.bool(forKey: "haveRanOnce")) {
+
+            let alert = UIAlertController(title: "How To Play?", message: "Put your concentration power to the test. Match same cards to score 2 points. However, if a card is opened more than once, without being matched, you lose a point. Game instructions and high score can be checked at any point of time by clicking on the ?? button in the bottom left. So, concentrate and enjoy the game.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "Play", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+            userDefault.set(true, forKey: "haveRanOnce")
+        }
         
     }
     
@@ -127,8 +140,6 @@ class ViewController: UIViewController {
             brain.highScore = savedHighScore as! Int
         }
         
-        print(brain.highScore)
-        
     }
     
     private func update() {
@@ -188,8 +199,6 @@ class ViewController: UIViewController {
                 brain.highScore = brain.points
                 userDefault.set(brain.highScore, forKey: "highScore")
             }
-            
-            print(brain.highScore)
         }
         
     }
